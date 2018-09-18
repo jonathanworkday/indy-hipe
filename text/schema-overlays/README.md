@@ -80,74 +80,41 @@ Schema Overlays solve several use cases:
 * Overlay `libindy` code:
   * ledger read and write
   * validation
+* DSL definition
 * Overlay library with DSL for core overlay types to be pulled in by agents
   * What are the language choices available to us?
 * Extensible for new DSL libraries which agents can import
 * Ledger search for an overlay
 * Update to credential and proof request definitions to allow overlays to be suggested
-
+* Tests
+  * libindy
+  * Agent DSL library
 
 _TODO:_
 
 Provide guidance for implementers, procedures to inform testing,
 interface definitions, formal function prototypes, error codes,
 diagrams, and other technical details that might be looked up.
-Strive to guarantee that:
-
-- Interactions with other features are clear.
-- Implementation trajectory is well defined.
-- Corner cases are dissected by example.
 
 # Drawbacks
 [drawbacks]: #drawbacks
 
-* Need to manage proliferation of overlays since they increase the ledger size.
+* Need to manage proliferation of overlays since they increase the size of the ledger.
 
 # Rationale and alternatives
 [alternatives]: #alternatives
 
-_TODO:_
-
-- Why is this design the best in the space of possible designs?
-- What other designs have been considered and what is the rationale for not
-choosing them?
-- What is the impact of not doing this?
+This design allows for certain Overlays to emerge over time as trusted de facto standards. Other than the Overlay objects being written to the ledger, this design has very little impact on the existing Indy solution. If an agent chooses to ignore Overlays, they are free to use all other features of Indy without penalty.
 
 # Prior art
 [prior-art]: #prior-art
 
-_TODO:_
-
-Discuss prior art, both the good and the bad, in relation to this proposal.
-A few examples of what this can include are:
-
-- Does this feature exist in other SSI ecosystems and what experience have
-their community had?
-- For other teams: What lessons can we learn from other attempts?
-- Papers: Are there any published papers or great posts that discuss this?
-If you have some relevant papers to refer to, this can serve as a more detailed
-theoretical background.
-
-This section is intended to encourage you as an author to think about the
-lessons from other implementers, provide readers of your proposal with a
-fuller picture. If there is no prior art, that is fine - your ideas are
-interesting to us whether they are brand new or if they are an adaptation
-from other communities.
-
-Note that while precedent set by other communities is some motivation, it
-does not on its own motivate an enhancement proposal here. Please also take
-into consideration that Indy sometimes intentionally diverges from common
-identity features.
+I am not aware of prior art in this space.
 
 # Unresolved questions
 [unresolved]: #unresolved-questions
 
-_TODO:_
-
-- What parts of the design do you expect to resolve through the
-enhancement proposal process before this gets merged?
-- What parts of the design do you expect to resolve through the
-implementation of this feature before stabilization?
-- What related issues do you consider out of scope for this
-proposal that could be addressed in the future independently of the
-solution that comes out of this doc?
+* There has already been discussion in the community to define what an Overlay is. We expect additional use cases brought up during the review process to inform this discussion.
+* Design of the Overlay ledger object needs to be defined as part of the review discussion.
+* It is unclear at the time of writing how this design is affected by enhancements to the Indy schema. To my knowledge, these enhancements are not yet released formally as a HIPE.
+* Naming - is the term overlay the correct one?
