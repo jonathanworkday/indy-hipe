@@ -110,21 +110,39 @@ Suggested format for flagging SSN as a sensitive field:
 }
 ```
 
-_TODO:_ expand the following
+_TODO:_
+### Libindy modifications
+
+_TODO:_
+
 * Overlay `libindy` code:
   * ledger read and write
   * validation
-* DSL definition
+
+### DSL definition
+
+_TODO:_
+
 * Overlay library with DSL for core overlay types to be pulled in by agents
   * What are the language choices available to us?
 * Extensible for new DSL libraries which agents can import
-* Ledger search for an overlay
-* Update to credential and proof request definitions to allow overlays to be suggested
-* Tests
-  * libindy
-  * Agent DSL library
+
+### Ledger search for an overlay
+
+Search requires a separate HIPE
+
+### Update to credential and proof request definitions to allow overlays to be suggested
 
 _TODO:_
+
+### Testing
+
+_TODO:_
+
+* libindy
+* Agent DSL library
+
+### _TODO:_
 
 Provide guidance for implementers, procedures to inform testing,
 interface definitions, formal function prototypes, error codes,
