@@ -76,7 +76,41 @@ Schema Overlays solve several use cases:
 # Reference
 [reference]: #reference
 
-* Overlay definition
+### Overlay format
+
+Suggested format for Dutch translation overlay:
+```
+{
+  "type":"did:sov:1234abcd;spec/schema/1.0/overlay",
+  "id":"12345",
+  "schemaId":"67890",
+  "schemaVersion":"1.0",
+  "name":"dutch translation",
+  "attributes": [
+    "firstName": {
+      "language":{"nl":"voornaam"}
+    }
+  ]
+}
+```
+
+Suggested format for flagging SSN as a sensitive field:
+```
+{
+  "type":"did:sov:1234abcd;spec/schema/1.0/overlay",
+  "id":"23456",
+  "schemaId":"67890",
+  "schemaVersion":"1.0",
+  "name":"sensitive fields",
+  "attributes": [
+    "SSN": {
+      "category":"DANGEROUS"
+    }
+  ]
+}
+```
+
+_TODO:_ expand the following
 * Overlay `libindy` code:
   * ledger read and write
   * validation
